@@ -22,12 +22,13 @@ namespace LinkedList2D
         {
             Node<T> newNode = new Node<T>(data);
 
-            Head = newNode;
-            Tail = newNode;
-            Count = 1;
+            head = newNode;
+            tail = newNode;
+            count = 1;
         }
-        public void AddNodeToBeginning(Note<T> newNode)
+        public void AddNodeToBeginning(T data)
         {
+            Node<T> newNode = new Node<T>(data);
             if (head == null)
             {
                 head = newNode;
@@ -43,9 +44,10 @@ namespace LinkedList2D
             }
 
         }
-        public void AddNodeToEnd(Note<T> newNode)
+        public void AddNodeToEnd(T data)
         {
-            if (head = null)
+            Node<T> newNode = new Node<T>(data);
+            if (head == null)
             {
                 head = newNode;
                 tail = newNode;
@@ -65,7 +67,7 @@ namespace LinkedList2D
             Node<T> runner = head;
             while (runner != null)
             {
-                Console.Write(runner.Data);
+                Console.Write(runner.Data + " ");
                 runner = runner.Next;
             }
         }
@@ -84,12 +86,15 @@ namespace LinkedList2D
 
         public Node<T> FindNode(T target)
         {
+            
             Node<T> currentNode = head;
             while(currentNode!=null && !currentNode.Data.Equals(target))
             {
                 currentNode = currentNode.Next;
+                
             }
             return currentNode;
+            
         }
 
         public void AddRange(LinkedList2D<T> linkedList)

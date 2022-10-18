@@ -33,9 +33,10 @@ namespace LinkedList2D
             Node<int> minEl = linkedList2d.FindMinNode();
             Console.WriteLine(minEl.Data);
 
-            //doublyLinkedList.RemoveNodeWithData(-5);
+            Node<int> target = linkedList2d.FindNode(155);
+            Console.WriteLine(target.Data);
 
-
+    
 
             List<int> list = new List<int>();
                                               
